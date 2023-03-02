@@ -8,9 +8,9 @@ Sample request:
 {
   "key": "[Issued by server side]",
   "prompts": [
-    {"role": "user", "Hello! How are you?"}, 
-    {"role": "assistant", "I'm fine, thank you."}, 
-    {"role": "user", "What is the weather like today?"}
+    {"role": "user", "content": "Hello! How are you?"}, 
+    {"role": "assistant", "content": "I'm fine, thank you."}, 
+    {"role": "user", "content": "What is the weather like today?"}
   ]
 }
 ```
