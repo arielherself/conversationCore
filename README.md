@@ -25,6 +25,7 @@ pip install -r requirements.txt
 
 ## Deploy
 
+- `local_secrets.OPENAI_API_KEY`: Get it at https://platform.openai.com
 - `trustedKeys`: One key for each line, used for authentication.
 - `cert.pem`: SSL certificate
 - `key.pem`: SSL key
