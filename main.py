@@ -3,6 +3,7 @@ from wsgiref.simple_server import make_server
 import urllib.parse
 import re
 import core
+import ssl
 
 def app(env, start_response):
     start_response('200 OK', [('Content-Type', 'application/json'), 
@@ -27,4 +28,5 @@ def app(env, start_response):
 if __name__ == '__main__':
     port = 6088
     httpd = make_server('0.0.0.0', port, app)
+    httpd.socket = ssl.wrap_socket(httpd.socket, server_side=True, certfile='cert.pem', keyfile='key.pem', ssl_version=ssl.PROTOCOL_TLS)
     httpd.serve_forever()
